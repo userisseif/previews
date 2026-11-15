@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behind Dulce's Lens | Photography</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f1ec;--ink:#1c1917;--muted:#78716c;--line:#e2dbd2;--dark:#14110f;--warm:#c9a88a;--blush:#e8cfc4}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-weight:300}
+a{color:inherit;text-decoration:none}
+.cg{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400}
+.banner{background:var(--dark);color:#d6cfc7;font-size:12px;text-align:center;padding:8px 16px;letter-spacing:.04em}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+nav{position:absolute;left:0;right:0;z-index:20;color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-size:24px;font-style:italic}
+.links{display:flex;gap:32px;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.btn{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;padding:15px 26px;border:1px solid currentColor;transition:.3s;background:transparent;cursor:pointer;color:inherit;font-family:inherit}
+.btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn.fill{background:var(--ink);color:#fff;border-color:var(--ink)}
+/* viewfinder hero */
+.hero{height:min(100vh,860px);min-height:600px;position:relative;background:var(--dark);overflow:hidden;color:#fff}
+.scene{position:absolute;inset:0;background:radial-gradient(60% 50% at 70% 40%,#e9b98c 0,#b77b56 30%,transparent 60%),radial-gradient(80% 70% at 20% 90%,#3b2a22 0,transparent 60%),linear-gradient(180deg,#d7a37c 0%,#8c5a40 45%,#2a1d17 100%);filter:saturate(.9)}
+.scene .sun{position:absolute;right:22%;top:26%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,#fff3dc 0,#ffd9a6 35%,transparent 70%);filter:blur(4px);animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{50%{transform:scale(1.08);opacity:.85}}
+.scene svg{position:absolute;bottom:0;left:0;width:100%;height:62%}
+.grain{position:absolute;inset:0;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+.vf{position:absolute;inset:96px 40px 40px;pointer-events:none}
+.vf i{position:absolute;width:44px;height:44px;border-color:rgba(255,255,255,.85);border-style:solid}
+.vf .tl{top:0;left:0;border-width:2px 0 0 2px}.vf .tr{top:0;right:0;border-width:2px 2px 0 0}
+.vf .bl{bottom:0;left:0;border-width:0 0 2px 2px}.vf .br{bottom:0;right:0;border-width:0 2px 2px 0}
+.focus{position:absolute;left:50%;top:50%;width:70px;height:70px;transform:translate(-50%,-50%);border:1.5px solid #fff;animation:af 2.4s ease-out 1}
+.focus:before,.focus:after{content:"";position:absolute;background:#fff}
+.focus:before{left:50%;top:-10px;width:1.5px;height:10px}
+.focus:after{top:50%;left:-10px;height:1.5px;width:10px}
+@keyframes af{0%{transform:translate(-50%,-50%) scale(1.8);opacity:0}40%{opacity:1}60%{transform:translate(-50%,-50%) scale(.9)}100%{transform:translate(-50%,-50%) scale(1)}}
+.rec{position:absolute;top:14px;left:62px;font-size:11px;letter-spacing:.2em;display:flex;align-items:center;gap:8px}
+.rec b{width:8px;height:8px;border-radius:50%;background:#ff5a4e;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+.hud{position:absolute;bottom:14px;left:62px;right:62px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;font-variant-numeric:tabular-nums}
+.hero-copy{position:absolute;left:0;right:0;bottom:120px}
+.hero-copy small{font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:clamp(52px,9vw,130px);line-height:.9;margin:14px 0 26px;letter-spacing:-.01em}
+.hero h1 em{font-style:italic;color:#ffe2c6}
+section{padding:110px 0}
+.eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+h2{font-size:clamp(40px,5.6vw,72px);line-height:1;margin:14px 0 18px}
+h2 em{font-style:italic;color:var(--warm)}
+.lead{font-size:18px;color:var(--muted);max-width:540px}
+/* film strip sessions */
+.strip{background:var(--dark);padding:26px 0;margin-top:56px;position:relative}
+.strip:before,.strip:after{content:"";position:absolute;left:0;right:0;height:14px;background:repeating-linear-gradient(90deg,transparent 0 14px,var(--bg) 14px 26px,transparent 26px 40px);opacity:.9}
+.strip:before{top:6px}.strip:after{bottom:6px}
+.frames{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 14px}
+.frame{aspect-ratio:4/5;position:relative;overflow:hidden;color:#fff;display:flex;flex-direction:column;justify-content:flex-end;padding:26px}
+.frame .ph{position:absolute;inset:0;transition:transform 1s ease}
+.frame:hover .ph{transform:scale(1.05)}
+.frame>*:not(.ph){position:relative}
+.frame .no{position:absolute;top:18px;left:22px;font-size:11px;letter-spacing:.2em;opacity:.8}
+.frame h3{font-size:40px;line-height:1;font-style:italic}
+.frame p{font-size:14px;opacity:.85;margin-top:6px}
+.p1{background:radial-gradient(50% 40% at 50% 38%,#f1d3bd 0,transparent 70%),linear-gradient(160deg,#c99a7b,#6e4a3a)}
+.p2{background:radial-gradient(40% 35% at 40% 45%,#f3e4d6 0,transparent 70%),linear-gradient(200deg,#d5c3b3,#8b7666)}
+.p3{background:radial-gradient(45% 40% at 60% 40%,#e6d9c7 0,transparent 70%),linear-gradient(170deg,#9fa48e,#4f5444)}
+.sil{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80%;opacity:.35}
+/* package */
+.pack{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.spec{border-top:1px solid var(--line)}
+.spec div{display:flex;justify-content:space-between;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);font-size:16px}
+.spec span{color:var(--muted)}
+.spec b{font-weight:500;text-align:right}
+.counter{display:flex;align-items:baseline;gap:14px;margin:30px 0}
+.counter .n{font-size:110px;line-height:.9}
+.counter small{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+/* what to wear */
+.wear{background:#fff}
+.wear-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.palettes{display:grid;gap:16px}
+.pal{display:flex;align-items:center;gap:18px;padding:18px;border:1px solid var(--line);cursor:pointer;transition:.25s;background:#fff;font:inherit;text-align:left;width:100%;color:inherit}
+.pal.on,.pal:hover{border-color:var(--ink)}
+.pal .dots{display:flex}
+.pal .dots i{width:36px;height:36px;border-radius:50%;margin-right:-10px;border:2px solid #fff}
+.pal h4{font-family:"Cormorant Garamond",serif;font-size:24px;font-weight:500;font-style:italic;line-height:1.1}
+.pal small{color:var(--muted);font-size:13px}
+.pal .t{margin-left:18px}
+.avoid{display:flex;gap:16px;margin-top:22px;padding:18px;background:var(--bg);align-items:center;flex-wrap:wrap}
+.avoid .x{display:flex;gap:8px}
+.avoid .x i{width:30px;height:30px;border-radius:50%;position:relative}
+.avoid .x i:after{content:"";position:absolute;left:-3px;right:-3px;top:50%;height:2px;background:var(--ink);transform:rotate(-45deg)}
+.avoid p{font-size:14px;color:var(--muted);flex:1;min-width:200px}
+.preview{aspect-ratio:4/5;position:relative;background:var(--bg);overflow:hidden}
+.preview svg{width:100%;height:100%;display:block}
+.preview svg *{transition:fill .7s ease}
+.preview .cap{position:absolute;left:20px;bottom:18px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#fff;mix-blend-mode:difference}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:50px}
+.step .n{font-size:64px;font-style:italic;color:var(--warm);line-height:1}
+.step h3{font-weight:500;font-size:17px;margin:10px 0 6px}
+.step p{color:var(--muted);font-size:15px}
+/* inquire */
+.inq{background:var(--dark);color:#f3ede6}
+.inq .eyebrow{color:#a8a29e}
+.inq-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
+form{display:grid;gap:14px}
+input,select,textarea{font:inherit;font-weight:300;color:#fff;padding:16px 0;border:0;border-bottom:1px solid rgba(255,255,255,.25);width:100%;background:transparent}
+input::placeholder,textarea::placeholder{color:#a8a29e}
+select option{color:#000}
+input:focus,select:focus,textarea:focus{outline:0;border-color:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.inq .btn{color:#fff;margin-top:14px;justify-self:start}
+.inq .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+footer{background:var(--dark);color:#78716c;border-top:1px solid rgba(255,255,255,.08);padding:26px 0;font-size:12px;letter-spacing:.12em;text-transform:uppercase}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:900px){
+ .links{display:none}
+ .vf{inset:88px 16px 20px}
+ .rec{left:56px}.hud{left:16px;right:16px;bottom:30px}.hud span:nth-child(2){display:none}
+ .hero-copy{bottom:84px}
+ .frames,.steps{grid-template-columns:1fr}
+ .steps{gap:32px}
+ .pack,.wear-grid,.inq-grid{grid-template-columns:1fr;gap:40px}
+ section{padding:72px 0}
+ .row{grid-template-columns:1fr}
+ .counter .n{font-size:84px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Free concept preview designed for Behind Dulce's Lens by Seif · Not the official site · Your real photos go in every frame</div>
+
+<header class="hero">
+ <div class="scene">
+  <div class="sun"></div>
+  <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+   <path d="M0 260 Q200 180 420 230 T820 210 T1200 230 V500 H0Z" fill="#5b3a2b" opacity=".55"/>
+   <path d="M0 330 Q300 270 600 320 T1200 300 V500 H0Z" fill="#3a271f" opacity=".8"/>
+   <g fill="#1c1310" transform="translate(330 0)">
+    <!-- family silhouette -->
+    <circle cx="560" cy="250" r="20"/><path d="M536 275 q24-12 48 0 l8 120 h-64z"/>
+    <circle cx="640" cy="240" r="22"/><path d="M612 268 q28-12 56 0 l6 130 h-68z"/>
+    <circle cx="600" cy="320" r="13"/><path d="M584 336 q16-8 32 0 l4 64 h-40z"/>
+    <path d="M582 300 L596 330 M660 300 L612 330" stroke="#1c1310" stroke-width="7" stroke-linecap="round"/>
+   </g>
+   <path d="M0 400 Q600 360 1200 400 V500 H0Z" fill="#14110f"/>
+  </svg>
+ </div>
+ <div class="grain"></div>
+ <nav><div class="wrap">
+  <a class="logo cg" href="#">Behind Dulce's Lens</a>
+  <div class="links"><a href="#sessions">Sessions</a><a href="#wear">What to wear</a><a href="#inquire">Inquire</a></div>
+  <a class="btn" href="#inquire">Book</a>
+ </div></nav>
+ <div class="vf"><i class="tl"></i><i class="tr"></i><i class="bl"></i><i class="br"></i>
+  <span class="rec"><b></b>REC</span>
+  <div class="focus"></div>
+  <div class="hud"><span>F/1.8</span><span>1/250</span><span>ISO 200</span><span id="clock">00:00:00</span></div>
+ </div>
+ <div class="hero-copy"><div class="wrap">
+  <small>Lifestyle · Family · Newborn</small>
+  <h1 class="cg">The little moments,<br><em>kept forever.</em></h1>
+  <a class="btn" href="#inquire">Book your session</a>
+ </div></div>
+</header>
+
+<section id="sessions"><div class="wrap">
+ <span class="eyebrow">Sessions</span>
+ <h2 class="cg">Real life, <em>softly told.</em></h2>
+ <p class="lead">Relaxed sessions where you play, cuddle and laugh, and I catch the moments in between. No stiff poses.</p>
+</div>
+ <div class="strip"><div class="frames">
+  <div class="frame"><div class="ph p1"></div><span class="no">FRAME 01</span><h3 class="cg">Lifestyle</h3><p>At home or outdoors, just being yourselves.</p></div>
+  <div class="frame"><div class="ph p2"></div><span class="no">FRAME 02</span><h3 class="cg">Newborn</h3><p>Those first tiny weeks, gently and safely.</p></div>
+  <div class="frame"><div class="ph p3"></div><span class="no">FRAME 03</span><h3 class="cg">Family</h3><p>Everyone together, in one frame you'll actually hang.</p></div>
+ </div></div>
+</section>
+
+<section style="padding-top:20px"><div class="wrap pack">
+ <div>
+  <span class="eyebrow">The session</span>
+  <h2 class="cg">Simple, and <em>all yours.</em></h2>
+  <div class="counter"><span class="n cg" id="count">0</span><small>edited photos<br>per session</small></div>
+ </div>
+ <div class="spec">
+  <div><span>Length</span><b>Hourly sessions</b></div>
+  <div><span>You receive</span><b>25 to 35 edited photos</b></div>
+  <div><span>Session types</span><b>Lifestyle, family, newborn</b></div>
+  <div><span>Location</span><b>Travel available</b></div>
+  <div><span>Price</span><b>$ — per hour</b></div>
+ </div>
+</div></section>
+
+<section id="wear" class="wear"><div class="wrap wear-grid">
+ <div>
+  <span class="eyebrow">What to wear</span>
+  <h2 class="cg">Colors that <em>photograph beautifully.</em></h2>
+  <p class="lead" style="margin-bottom:28px">Tap a palette to see how it looks together on camera.</p>
+  <div class="palettes">
+   <button class="pal on" data-c="#c9a88a,#efe4d6,#8a6a55,#f6efe7"><span class="dots"><i style="background:#c9a88a"></i><i style="background:#efe4d6"></i><i style="background:#8a6a55"></i></span><span class="t"><h4>Warm neutrals</h4><small>Cream, camel, soft brown</small></span></button>
+   <button class="pal" data-c="#b9c6d3,#f3f1ee,#6f7f91,#e8edf2"><span class="dots"><i style="background:#b9c6d3"></i><i style="background:#f3f1ee"></i><i style="background:#6f7f91"></i></span><span class="t"><h4>Dusty blues</h4><small>Chambray, ivory, slate</small></span></button>
+   <button class="pal" data-c="#d9b3a8,#f4e6df,#9b6d62,#f7eeea"><span class="dots"><i style="background:#d9b3a8"></i><i style="background:#f4e6df"></i><i style="background:#9b6d62"></i></span><span class="t"><h4>Blush &amp; rose</h4><small>Soft pink, oat, mauve</small></span></button>
+  </div>
+  <div class="avoid">
+   <div class="x"><i style="background:#39ff14"></i><i style="background:#ff00e6"></i><i style="background:#4caf50"></i></div>
+   <p>Skip fluorescent colors and too much green. They cast odd tones on skin and blend into outdoor backgrounds.</p>
+  </div>
+ </div>
+ <div class="preview">
+  <svg viewBox="0 0 400 500" aria-label="Family outfit color preview">
+   <rect id="bgc" width="400" height="500" fill="#f6efe7"/>
+   <circle cx="130" cy="150" r="34" fill="#e7c4a8"/>
+   <path id="o1" d="M84 200 q46-24 92 0 l14 260 h-120z" fill="#c9a88a"/>
+   <circle cx="270" cy="130" r="38" fill="#d9b394"/>
+   <path id="o2" d="M220 184 q50-24 100 0 l12 276 h-124z" fill="#8a6a55"/>
+   <circle cx="200" cy="290" r="24" fill="#efcfb3"/>
+   <path id="o3" d="M170 320 q30-16 60 0 l8 140 h-76z" fill="#efe4d6"/>
+   <path d="M96 120 q34-30 68 0 q-10-22-34-24 q-26 2-34 24z" fill="#4a3428"/>
+   <path d="M232 100 q38-32 76 0 l4 40 q-8-34-40-36 q-32 2-40 36z" fill="#2f241e"/>
+  </svg>
+  <span class="cap">Outfit preview</span>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <span class="eyebrow">How it works</span>
+ <h2 class="cg">From hello to <em>gallery.</em></h2>
+ <div class="steps">
+  <div class="step"><div class="n cg">i.</div><h3>Inquire</h3><p>Tell me about your family and the session you want.</p></div>
+  <div class="step"><div class="n cg">ii.</div><h3>Plan</h3><p>We pick a spot, a time with good light, and outfits.</p></div>
+  <div class="step"><div class="n cg">iii.</div><h3>Shoot</h3><p>About an hour of play and real moments, no pressure.</p></div>
+  <div class="step"><div class="n cg">iv.</div><h3>Gallery</h3><p>25 to 35 edited photos, ready to print and share.</p></div>
+ </div>
+</div></section>
+
+<section id="inquire" class="inq"><div class="wrap inq-grid">
+ <div>
+  <span class="eyebrow">Inquire</span>
+  <h2 class="cg">Let's make <em style="color:#e8cfc4">something lovely.</em></h2>
+  <p class="lead" style="color:#a8a29e">behindulceslens@gmail.com</p>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Inquiry sent ✓ (demo)'">
+  <div class="row"><input placeholder="Your name" required><input placeholder="Email" type="email" required></div>
+  <div class="row"><select><option>Session type</option><option>Lifestyle</option><option>Family</option><option>Newborn</option></select><input type="date"></div>
+  <input placeholder="Where would you like the session?">
+  <textarea rows="3" placeholder="Tell me about your family"></textarea>
+  <button class="btn" type="submit">Send inquiry</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© Behind Dulce's Lens</span><span>Concept preview by Seif</span></div></footer>
+
+<script>
+(function(){var c=document.getElementById('clock');function t(){var d=new Date();c.textContent=[d.getHours(),d.getMinutes(),d.getSeconds()].map(function(n){return String(n).padStart(2,'0')}).join(':')}t();setInterval(t,1000)})();
+(function(){var el=document.getElementById('count'),done=false;var io=new IntersectionObserver(function(e){if(e[0].isIntersecting&&!done){done=true;var n=0;var iv=setInterval(function(){n++;el.textContent=n;if(n>=35){clearInterval(iv);el.textContent='25–35'}},30)}});io.observe(el)})();
+document.querySelectorAll('.pal').forEach(function(p){p.addEventListener('click',function(){document.querySelectorAll('.pal').forEach(function(x){x.classList.remove('on')});p.classList.add('on');var c=p.dataset.c.split(',');document.getElementById('o1').setAttribute('fill',c[0]);document.getElementById('o3').setAttribute('fill',c[1]);document.getElementById('o2').setAttribute('fill',c[2]);document.getElementById('bgc').setAttribute('fill',c[3])})});
+</script>
+</body>
+</html>

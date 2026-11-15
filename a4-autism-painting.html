@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A 4 Autism Painting Company | Massachusetts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--wall:#e9e2d6;--paper:#fbf8f3;--ink:#1f2a2e;--muted:#6b7378;--line:#e3dccf;--trim:#ffffff;--a:#3e6b73;--b:#d98b5f;--c:#e8c66a;--d:#7e9c7a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.banner{background:var(--ink);color:#e9e5dc;font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+nav{position:sticky;top:0;z-index:20;background:rgba(251,248,243,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em}
+.swatches{display:flex}
+.swatches i{width:12px;height:26px;border-radius:3px;margin-right:-3px;border:2px solid var(--paper)}
+.links{display:flex;gap:26px;font-size:15px;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-weight:600;padding:13px 22px;border-radius:999px;font-size:15px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(31,42,46,.18)}
+.btn.light{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+/* hero */
+.hero{padding:72px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--a)}
+.kicker:before{content:"";width:24px;height:2px;background:currentColor}
+.hero h1{font-size:clamp(44px,6.4vw,82px);line-height:.98;letter-spacing:-.02em;margin:18px 0 22px}
+.hero h1 em{color:var(--a)}
+.hero p{font-size:18px;color:var(--muted);max-width:520px;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.room{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(31,42,46,.25);background:#fff}
+.room svg{display:block;width:100%;height:auto}
+#wallfill{transition:fill .6s ease}
+.picker{background:#fff;border-top:1px solid var(--line);padding:14px 16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.picker small{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{width:34px;height:34px;border-radius:10px;border:2px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer;transition:.2s}
+.chip.on{box-shadow:0 0 0 2px var(--ink);transform:scale(1.08)}
+#cname{font-weight:700;font-size:15px;margin-left:auto}
+/* mission */
+.mission{margin:56px 0 0;background:var(--ink);color:#f1ede5;border-radius:28px;padding:44px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
+.puzzle{width:84px;height:84px}
+.mission h2{font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin-bottom:8px}
+.mission p{color:#c9c6bf;max-width:720px}
+section{padding:96px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.head h2{font-size:clamp(36px,4.8vw,58px);line-height:1;letter-spacing:-.01em}
+.head p{color:var(--muted);max-width:380px}
+/* paint chip services */
+.chipgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px}
+.pchip{background:#fff;border-radius:6px;box-shadow:0 1px 0 var(--line),0 12px 30px -18px rgba(0,0,0,.25);overflow:hidden;transition:.25s}
+.pchip:hover{transform:translateY(-4px) rotate(-.4deg)}
+.pchip .sw{height:130px;position:relative}
+.pchip .sw span{position:absolute;right:12px;top:12px;font-size:11px;font-weight:700;letter-spacing:.1em;color:rgba(255,255,255,.85)}
+.pchip .body{padding:18px 18px 20px}
+.pchip h3{font-size:18px;margin-bottom:4px}
+.pchip p{font-size:14.5px;color:var(--muted)}
+.pchip .code{display:flex;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.05em}
+/* finishes */
+.alt{background:var(--wall)}
+.fin{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.tex{aspect-ratio:1/1.15;border-radius:20px;position:relative;overflow:hidden;display:flex;align-items:end;padding:16px;color:#fff;font-weight:600}
+.tex b{position:relative;z-index:1;text-shadow:0 1px 8px rgba(0,0,0,.25)}
+.t1{background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35) 0 2px,transparent 3px) 0 0/14px 14px,radial-gradient(circle at 70% 60%,rgba(0,0,0,.08) 0 2px,transparent 3px) 0 0/11px 11px,#b8a58c}
+.t2{background:repeating-linear-gradient(115deg,rgba(255,255,255,.12) 0 6px,transparent 6px 18px),repeating-linear-gradient(25deg,rgba(0,0,0,.06) 0 3px,transparent 3px 22px),#6f8b8f}
+.t3{background:conic-gradient(from 30deg at 40% 60%,#d8c3a5,#c9b08c,#e4d4bb,#c4a983,#d8c3a5)}
+.t4{background:linear-gradient(135deg,rgba(255,255,255,.25),transparent 40%),linear-gradient(315deg,rgba(0,0,0,.18),transparent 50%),#2f3b40}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.step{padding:28px 24px 0 0;position:relative}
+.step:before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--a)}
+.step .n{font-size:44px;line-height:1;color:var(--b)}
+.step h3{font-size:18px;margin:10px 0 6px}
+.step p{font-size:15px;color:var(--muted);padding-right:12px}
+/* reviews */
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.q{background:#fff;border-radius:22px;padding:30px;border:1px solid var(--line)}
+.q blockquote{font-size:24px;line-height:1.3;margin-bottom:16px}
+.q small{color:var(--muted);font-weight:600}
+.q .tag{display:inline-block;margin-top:10px;font-size:12px;background:var(--wall);padding:4px 10px;border-radius:99px;color:var(--muted)}
+/* estimate */
+.est{display:grid;grid-template-columns:1fr 1.15fr;gap:48px}
+.contact dl{display:grid;gap:18px;margin-top:28px}
+.contact dt{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+.contact dd{font-size:19px;font-weight:600}
+form{background:#fff;border-radius:24px;padding:30px;border:1px solid var(--line);display:grid;gap:14px}
+label{font-size:13px;font-weight:600;color:var(--muted)}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;width:100%;background:var(--paper)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rooms{display:flex;flex-wrap:wrap;gap:8px}
+.rooms label{cursor:pointer}
+.rooms input{display:none}
+.rooms span{display:inline-block;padding:9px 14px;border-radius:99px;border:1px solid var(--line);font-weight:500;color:var(--ink);background:var(--paper);transition:.15s}
+.rooms input:checked+span{background:var(--ink);color:#fff;border-color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:30px 0;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.callbar{display:none}
+@media (max-width:900px){
+ .links{display:none}
+ .hero{padding:40px 0 20px}
+ .hero-grid,.est{grid-template-columns:1fr;gap:36px}
+ .fin{grid-template-columns:repeat(2,1fr)}
+ .steps{grid-template-columns:1fr 1fr;row-gap:32px}
+ .quotes{grid-template-columns:1fr}
+ .mission{grid-template-columns:1fr;padding:30px}
+ section{padding:64px 0}
+ .row{grid-template-columns:1fr}
+ nav .btn{display:none}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;gap:8px;padding:10px 12px;background:var(--paper);border-top:1px solid var(--line);z-index:30}
+ .callbar a{flex:1;justify-content:center}
+ body{padding-bottom:72px}
+ #cname{margin-left:0;width:100%}
+}
+</style>
+</head>
+<body>
+<div class="banner">Free concept preview designed for A 4 Autism Painting Company by Seif · Not the official site</div>
+
+<nav><div class="wrap">
+ <a class="logo" href="#"><span class="swatches"><i style="background:var(--a)"></i><i style="background:var(--b)"></i><i style="background:var(--c)"></i><i style="background:var(--d)"></i></span>A 4 Autism Painting</a>
+ <div class="links"><a href="#services">Services</a><a href="#finishes">Finishes</a><a href="#mission">Our mission</a><a href="#reviews">Reviews</a></div>
+ <a class="btn" href="#estimate">Free estimate</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <div class="hero-grid">
+  <div>
+   <span class="kicker">Massachusetts painters</span>
+   <h1 class="serif">Color that changes the room, <em>and a little more.</em></h1>
+   <p>Interior and exterior painting, carpentry and specialty finishes, done carefully by a local crew. Every job also supports autism research.</p>
+   <div class="cta"><a class="btn" href="#estimate">Get a free estimate</a><a class="btn light" href="tel:5083720633">Call 508.372.0633</a></div>
+  </div>
+  <div class="room">
+   <svg viewBox="0 0 600 460" role="img" aria-label="Living room preview with changing wall color">
+    <rect id="wallfill" width="600" height="340" fill="#3e6b73"/>
+    <rect y="340" width="600" height="120" fill="#c9a77c"/>
+    <g opacity=".16" stroke="#7a5a35" stroke-width="2">
+     <line x1="0" y1="370" x2="600" y2="370"/><line x1="0" y1="400" x2="600" y2="400"/><line x1="0" y1="430" x2="600" y2="430"/>
+    </g>
+    <rect y="326" width="600" height="16" fill="#fff"/>
+    <!-- window -->
+    <rect x="380" y="50" width="160" height="190" rx="4" fill="#fff"/>
+    <rect x="390" y="60" width="140" height="170" fill="#dbe9ee"/>
+    <circle cx="500" cy="100" r="18" fill="#fff6d6"/>
+    <path d="M390 200 Q430 170 470 195 T530 185 V230 H390Z" fill="#b9d3c0"/>
+    <line x1="460" y1="60" x2="460" y2="230" stroke="#fff" stroke-width="6"/>
+    <line x1="390" y1="145" x2="530" y2="145" stroke="#fff" stroke-width="6"/>
+    <!-- frame -->
+    <rect x="110" y="70" width="150" height="110" rx="3" fill="#fff"/>
+    <rect x="120" y="80" width="130" height="90" fill="#efe6d8"/>
+    <circle cx="160" cy="125" r="22" fill="#d98b5f"/><rect x="180" y="105" width="50" height="50" fill="#e8c66a" opacity=".9"/>
+    <!-- sofa -->
+    <rect x="70" y="250" width="290" height="70" rx="22" fill="#f1ece4"/>
+    <rect x="60" y="270" width="310" height="60" rx="18" fill="#e5ddd0"/>
+    <rect x="95" y="232" width="110" height="50" rx="14" fill="#f7f3ec"/>
+    <rect x="215" y="232" width="110" height="50" rx="14" fill="#f7f3ec"/>
+    <rect x="80" y="330" width="10" height="16" fill="#6b5640"/><rect x="340" y="330" width="10" height="16" fill="#6b5640"/>
+    <!-- plant -->
+    <path d="M540 330 h40 l-6 -50 h-28z" fill="#d98b5f"/>
+    <path d="M560 282 C540 240 520 230 512 200 M560 282 C565 230 585 215 590 190 M560 282 C560 240 555 215 558 180" stroke="#5d7d5a" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <!-- roller -->
+    <g transform="translate(40 40) rotate(-18)">
+     <rect width="60" height="20" rx="8" fill="#fff" opacity=".85"/>
+     <path d="M60 10 h14 v34" stroke="#fff" stroke-width="4" fill="none" opacity=".85"/>
+    </g>
+   </svg>
+   <div class="picker">
+    <small>Try a wall color</small>
+    <div class="chips">
+     <button class="chip on" style="background:#3e6b73" data-c="#3e6b73" data-n="Harbor Teal" aria-label="Harbor Teal"></button>
+     <button class="chip" style="background:#d98b5f" data-c="#d98b5f" data-n="Terracotta" aria-label="Terracotta"></button>
+     <button class="chip" style="background:#e8c66a" data-c="#e8c66a" data-n="Honey Field" aria-label="Honey Field"></button>
+     <button class="chip" style="background:#7e9c7a" data-c="#7e9c7a" data-n="Sage Garden" aria-label="Sage Garden"></button>
+     <button class="chip" style="background:#e9e2d6" data-c="#e9e2d6" data-n="Warm Linen" aria-label="Warm Linen"></button>
+     <button class="chip" style="background:#2f3b40" data-c="#2f3b40" data-n="Midnight Slate" aria-label="Midnight Slate"></button>
+    </div>
+    <span id="cname">Harbor Teal</span>
+   </div>
+  </div>
+ </div>
+
+ <div class="mission" id="mission">
+  <svg class="puzzle" viewBox="0 0 100 100" aria-hidden="true">
+   <path d="M10 10h30a10 10 0 1 1 20 0h30v30a10 10 0 1 0 0 20v30H60a10 10 0 1 0-20 0H10V60a10 10 0 1 1 0-20z" fill="none" stroke="#e8c66a" stroke-width="5" stroke-linejoin="round"/>
+   <circle cx="50" cy="50" r="9" fill="#d98b5f"/>
+  </svg>
+  <div>
+   <h2 class="serif">Every project helps fund autism research.</h2>
+   <p>That's the "4" in our name. When you hire us to paint your home or business, part of what you pay goes toward autism research. Great walls, good cause.</p>
+  </div>
+ </div>
+</div></header>
+
+<section id="services"><div class="wrap">
+ <div class="head"><h2 class="serif">What we paint<br>and build</h2><p>Residential and commercial, inside and out. One crew from prep to the last clean edge.</p></div>
+ <div class="chipgrid">
+  <div class="pchip"><div class="sw" style="background:#3e6b73"><span>A4-01</span></div><div class="body"><h3>Interior painting</h3><p>Walls, ceilings, trim and doors, with furniture and floors fully protected.</p><div class="code"><span>Rooms · Hallways</span><span>Est. on visit</span></div></div></div>
+  <div class="pchip"><div class="sw" style="background:#7e9c7a"><span>A4-02</span></div><div class="body"><h3>Exterior painting</h3><p>Siding, trim, decks and porches, scraped and primed so it lasts New England winters.</p><div class="code"><span>Homes · Decks</span><span>Est. on visit</span></div></div></div>
+  <div class="pchip"><div class="sw" style="background:#d98b5f"><span>A4-03</span></div><div class="body"><h3>Kitchens</h3><p>Fresh walls and cabinet refinishing that make the whole kitchen feel new.</p><div class="code"><span>Walls · Cabinets</span><span>Est. on visit</span></div></div></div>
+  <div class="pchip"><div class="sw" style="background:#9fb7bd"><span>A4-04</span></div><div class="body"><h3>Bathrooms</h3><p>Moisture-ready paints and careful detail work around fixtures and tile.</p><div class="code"><span>Moisture-safe</span><span>Est. on visit</span></div></div></div>
+  <div class="pchip"><div class="sw" style="background:#a07b58"><span>A4-05</span></div><div class="body"><h3>Carpentry</h3><p>Trim, repairs and finish work done before the paint goes on.</p><div class="code"><span>Trim · Repairs</span><span>Est. on visit</span></div></div></div>
+  <div class="pchip"><div class="sw" style="background:#2f3b40"><span>A4-06</span></div><div class="body"><h3>Commercial</h3><p>Offices, shops and common areas, scheduled around your business hours.</p><div class="code"><span>Offices · Retail</span><span>Est. on visit</span></div></div></div>
+ </div>
+</div></section>
+
+<section id="finishes" class="alt"><div class="wrap">
+ <div class="head"><h2 class="serif">Textured &amp;<br>specialty finishes</h2><p>When a flat wall isn't enough. Ask about finishes for feature walls, entryways and ceilings.</p></div>
+ <div class="fin">
+  <div class="tex t1"><b>Knockdown texture</b></div>
+  <div class="tex t2"><b>Brushed accent</b></div>
+  <div class="tex t3"><b>Faux &amp; plaster look</b></div>
+  <div class="tex t4"><b>Deep-tone feature wall</b></div>
+ </div>
+</div></section>
+
+<section><div class="wrap">
+ <div class="head"><h2 class="serif">How a job goes</h2><p>Simple and predictable, so you know what's happening every day.</p></div>
+ <div class="steps">
+  <div class="step"><div class="n serif">01</div><h3>Free estimate</h3><p>We visit, measure and talk through colors and finishes.</p></div>
+  <div class="step"><div class="n serif">02</div><h3>Prep</h3><p>Furniture covered, surfaces patched, sanded and primed.</p></div>
+  <div class="step"><div class="n serif">03</div><h3>Paint</h3><p>Clean lines, even coats, quality paint.</p></div>
+  <div class="step"><div class="n serif">04</div><h3>Walkthrough</h3><p>We check every room with you before we call it done.</p></div>
+ </div>
+</div></section>
+
+<section id="reviews" class="alt"><div class="wrap">
+ <div class="head"><h2 class="serif">From homes in<br>Westminster to Westborough</h2><p>Your real customer reviews go here, pulled from Google.</p></div>
+ <div class="quotes">
+  <div class="q"><blockquote class="serif">"Your best review about a Westminster job goes right here."</blockquote><small>Customer name · Westminster, MA</small><br><span class="tag">Interior painting</span></div>
+  <div class="q"><blockquote class="serif">"A second review, maybe about a Westborough exterior."</blockquote><small>Customer name · Westborough, MA</small><br><span class="tag">Exterior painting</span></div>
+ </div>
+</div></section>
+
+<section id="estimate"><div class="wrap est">
+ <div class="contact">
+  <span class="kicker">Free estimate</span>
+  <h2 class="serif" style="font-size:clamp(38px,5vw,60px);line-height:1;margin-top:14px">Tell us about<br>your space.</h2>
+  <dl>
+   <div><dt>Phone</dt><dd><a href="tel:5083720633">508.372.0633</a></dd></div>
+   <div><dt>Email</dt><dd>a4autismpainting@gmail.com</dd></div>
+   <div><dt>Serving</dt><dd>Central Massachusetts</dd></div>
+  </dl>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Request sent ✓ (demo)'">
+  <div class="row"><input placeholder="Your name" required><input placeholder="Phone" required></div>
+  <label>What needs painting?</label>
+  <div class="rooms">
+   <label><input type="checkbox"><span>Living room</span></label>
+   <label><input type="checkbox"><span>Bedrooms</span></label>
+   <label><input type="checkbox"><span>Kitchen</span></label>
+   <label><input type="checkbox"><span>Bathroom</span></label>
+   <label><input type="checkbox"><span>Exterior</span></label>
+   <label><input type="checkbox"><span>Commercial</span></label>
+   <label><input type="checkbox"><span>Carpentry</span></label>
+  </div>
+  <div class="row"><input placeholder="Town" ><select><option>When do you want it done?</option><option>As soon as possible</option><option>Within a month</option><option>Just planning</option></select></div>
+  <textarea rows="4" placeholder="Colors you're thinking about, or anything else"></textarea>
+  <button class="btn" type="submit">Request my free estimate</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© A 4 Autism Painting Company · Massachusetts</span><span>Concept preview by Seif</span></div></footer>
+<div class="callbar"><a class="btn light" href="tel:5083720633">Call</a><a class="btn" href="#estimate">Free estimate</a></div>
+
+<script>
+document.querySelectorAll('.chip').forEach(function(c){c.addEventListener('click',function(){
+ document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});
+ c.classList.add('on');
+ document.getElementById('wallfill').setAttribute('fill',c.dataset.c);
+ document.getElementById('cname').textContent=c.dataset.n;
+});});
+</script>
+</body>
+</html>

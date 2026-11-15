@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petcare by Nadiya | Griswold, CT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fbf5ec;--cream2:#f4eadb;--ink:#2d2420;--muted:#7a6c63;--rose:#d9897a;--sage:#8da68a;--butter:#f2cf7a;--sky:#9cc1d4;--line:#eadfcf}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.pf{font-family:"Playfair Display",Georgia,serif}
+.banner{background:var(--ink);color:#f3e9dc;font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:rgba(251,245,236,.92);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:700}
+.logo svg{width:34px;height:34px}
+.links{display:flex;gap:24px;font-size:15px;font-weight:600;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--rose);color:#fff;font-weight:800;padding:13px 22px;border-radius:999px;font-size:15px;border:0;cursor:pointer;transition:.2s;box-shadow:0 6px 0 #b96e60}
+.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #b96e60}
+.btn.soft{background:#fff;color:var(--ink);box-shadow:0 6px 0 var(--line)}
+/* hero */
+.hero{padding:56px 0 80px;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.hello{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:99px;padding:7px 14px;font-size:14px;font-weight:700;color:var(--muted);box-shadow:0 2px 0 var(--line)}
+.hero h1{font-size:clamp(42px,6vw,76px);line-height:1.02;margin:22px 0 20px;font-weight:700}
+.hero h1 em{color:var(--rose);font-style:italic}
+.hero p{font-size:19px;color:var(--muted);max-width:520px;margin-bottom:30px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.badges span{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;background:var(--cream2);padding:8px 12px;border-radius:12px}
+.blob{position:relative;aspect-ratio:1/1}
+.blob .shape{position:absolute;inset:0;border-radius:46% 54% 42% 58%/55% 45% 55% 45%;background:var(--butter);animation:morph 12s ease-in-out infinite}
+@keyframes morph{50%{border-radius:58% 42% 55% 45%/45% 58% 42% 55%}}
+.blob svg{position:relative;width:100%;height:100%}
+.float{position:absolute;background:#fff;border-radius:16px;padding:10px 14px;font-size:14px;font-weight:700;box-shadow:0 10px 24px -10px rgba(45,36,32,.3);animation:bob 4s ease-in-out infinite}
+.float small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+.f1{top:8%;left:-4%}.f2{bottom:10%;right:-2%;animation-delay:1.5s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.paws{position:absolute;inset:0;pointer-events:none;opacity:.08}
+section{padding:96px 0}
+.eyebrow{font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose)}
+h2{font-size:clamp(34px,4.6vw,54px);line-height:1.05;margin:10px 0 14px;font-weight:700}
+.sub{color:var(--muted);max-width:560px;font-size:17px;margin-bottom:44px}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.s{background:#fff;border-radius:26px;padding:26px;transition:.25s;border:2px solid transparent}
+.s:hover{border-color:var(--ink);transform:rotate(-1deg)}
+.s .ic{width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font-size:28px;margin-bottom:16px}
+.s h3{font-size:20px;margin-bottom:4px}
+.s p{color:var(--muted);font-size:15px}
+.s.wide{grid-column:span 2;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--sage);color:#fff}
+.s.wide p{color:rgba(255,255,255,.86)}
+/* wedding */
+.wedding{background:var(--ink);color:var(--cream);border-radius:40px;margin:0 16px;padding:96px 0;position:relative;overflow:hidden}
+.wedding .eyebrow{color:var(--butter)}
+.wedding .sub{color:#cdbfb2}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tier{background:var(--cream);color:var(--ink);border-radius:28px 28px 120px 120px;padding:34px 28px 56px;text-align:center;position:relative}
+.tier.feat{background:var(--butter);transform:translateY(-14px)}
+.tier .ribbon{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--rose);color:#fff;font-size:12px;font-weight:800;padding:6px 14px;border-radius:99px;letter-spacing:.06em;white-space:nowrap}
+.tier .hrs{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.tier h3{font-size:28px;margin:10px 0 12px;font-style:italic;font-weight:500}
+.tier .p{font-size:48px;font-weight:700;line-height:1}
+.tier ul{list-style:none;margin:20px 0 0;display:grid;gap:8px;font-size:15px;color:#5d5049}
+.rehearsal{margin-top:36px;text-align:center;color:#cdbfb2}
+.rehearsal b{color:var(--butter)}
+.rings{position:absolute;right:-60px;top:-60px;width:260px;opacity:.12}
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.t{background:var(--cream2);border-radius:24px;padding:28px;display:flex;gap:16px;align-items:flex-start}
+.t .ic{font-size:30px}
+.t h3{font-size:18px}
+.t p{color:var(--muted);font-size:15px}
+/* area */
+.area{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.map{background:#fff;border-radius:30px;padding:20px}
+.map svg{width:100%;height:auto;display:block}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.r{background:#fff;border-radius:24px;padding:26px}
+.r .st{color:var(--butter);font-size:18px;letter-spacing:2px}
+.r p{margin:10px 0;font-size:16px}
+.r small{color:var(--muted);font-weight:700}
+/* booking */
+.book{display:grid;grid-template-columns:1fr 1.15fr;gap:48px}
+.contact dl{display:grid;gap:16px;margin-top:20px}
+.contact dt{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+.contact dd{font-size:19px;font-weight:800}
+form{background:#fff;border-radius:30px;padding:30px;display:grid;gap:12px}
+input,select,textarea{font:inherit;padding:13px 16px;border:2px solid var(--line);border-radius:16px;width:100%;background:var(--cream)}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--rose)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pets{display:flex;gap:8px;flex-wrap:wrap}
+.pets label{cursor:pointer}
+.pets input{display:none}
+.pets span{display:inline-block;padding:9px 14px;border-radius:14px;background:var(--cream2);font-weight:700}
+.pets input:checked+span{background:var(--ink);color:#fff}
+footer{padding:36px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.callbar{display:none}
+@media (max-width:900px){
+ .links,nav .btn{display:none}
+ .hero{padding:30px 0 56px}
+ .hero-grid,.area,.book{grid-template-columns:1fr}
+ .blob{max-width:380px;margin:0 auto;width:100%}
+ .f1{left:0}.f2{right:0}
+ .tiers,.trust,.revs{grid-template-columns:1fr}
+ .tier.feat{transform:none}
+ .s.wide{grid-column:auto;grid-template-columns:1fr}
+ .wedding{margin:0 8px;border-radius:28px;padding:64px 0}
+ section{padding:64px 0}
+ .row{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;gap:8px;padding:10px 12px 14px;background:var(--cream);border-top:1px solid var(--line);z-index:30}
+ .callbar a{flex:1;justify-content:center}
+ body{padding-bottom:76px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Free concept preview designed for Petcare by Nadiya by Seif · Not the official site</div>
+
+<nav><div class="wrap">
+ <a class="logo pf" href="#"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="20" fill="#d9897a"/><g fill="#fff"><ellipse cx="20" cy="25" rx="7" ry="6"/><circle cx="12" cy="17" r="3"/><circle cx="17" cy="12" r="3"/><circle cx="23" cy="12" r="3"/><circle cx="28" cy="17" r="3"/></g></svg>Petcare by Nadiya</a>
+ <div class="links"><a href="#services">Services</a><a href="#weddings">Weddings</a><a href="#area">Area</a><a href="#reviews">Reviews</a></div>
+ <a class="btn" href="#book">Book a meet &amp; greet</a>
+</div></nav>
+
+<header class="hero"><div class="wrap hero-grid">
+ <div>
+  <span class="hello">🐾 Griswold, CT · serving CT, RI &amp; Central MA</span>
+  <h1 class="pf">Fur-ever in <em>good hands.</em></h1>
+  <p>Walks, overnights, drop-ins, farm-animal care and even wedding pet attendants. Fear Free certified, insured and bonded, and genuinely obsessed with your pets.</p>
+  <div class="cta"><a class="btn" href="#book">Book a meet &amp; greet</a><a class="btn soft" href="tel:5084392187">Call (508) 439-2187</a></div>
+  <div class="badges"><span>✓ Fear Free certified</span><span>✓ Pet CPR &amp; First Aid</span><span>✓ Insured &amp; bonded</span></div>
+ </div>
+ <div class="blob">
+  <div class="shape"></div>
+  <svg viewBox="0 0 400 400" aria-label="Illustrated dog and cat">
+   <!-- dog -->
+   <ellipse cx="170" cy="300" rx="90" ry="60" fill="#c98b5a"/>
+   <circle cx="170" cy="190" r="72" fill="#d9a06e"/>
+   <ellipse cx="108" cy="190" rx="26" ry="52" fill="#a86d43" transform="rotate(18 108 190)"/>
+   <ellipse cx="232" cy="190" rx="26" ry="52" fill="#a86d43" transform="rotate(-18 232 190)"/>
+   <ellipse cx="170" cy="222" rx="38" ry="28" fill="#f3dcc2"/>
+   <ellipse cx="170" cy="208" rx="12" ry="9" fill="#2d2420"/>
+   <circle cx="144" cy="178" r="8" fill="#2d2420"/><circle cx="196" cy="178" r="8" fill="#2d2420"/>
+   <circle cx="147" cy="175" r="2.5" fill="#fff"/><circle cx="199" cy="175" r="2.5" fill="#fff"/>
+   <path d="M156 232 Q170 244 184 232" stroke="#2d2420" stroke-width="4" fill="none" stroke-linecap="round"/>
+   <path d="M164 240 q6 18 12 0" fill="#d9897a"/>
+   <path d="M118 262 Q170 280 222 262" stroke="#d9897a" stroke-width="12" fill="none" stroke-linecap="round"/>
+   <circle cx="170" cy="282" r="10" fill="#f2cf7a"/>
+   <!-- cat -->
+   <ellipse cx="300" cy="318" rx="58" ry="40" fill="#6f6f78"/>
+   <circle cx="300" cy="248" r="46" fill="#7d7d87"/>
+   <path d="M262 222 L268 180 L292 210Z M338 222 L332 180 L308 210Z" fill="#7d7d87"/>
+   <path d="M270 214 L272 192 L286 208Z M330 214 L328 192 L314 208Z" fill="#d9897a"/>
+   <ellipse cx="284" cy="246" rx="6" ry="8" fill="#f2cf7a"/><ellipse cx="316" cy="246" rx="6" ry="8" fill="#f2cf7a"/>
+   <ellipse cx="284" cy="247" rx="2" ry="6" fill="#2d2420"/><ellipse cx="316" cy="247" rx="2" ry="6" fill="#2d2420"/>
+   <path d="M296 262 h8 l-4 5z" fill="#d9897a"/>
+   <path d="M300 267 q-6 6 -12 2 M300 267 q6 6 12 2" stroke="#2d2420" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+   <path d="M356 330 Q392 300 372 262" stroke="#6f6f78" stroke-width="14" fill="none" stroke-linecap="round"/>
+   <!-- heart -->
+   <path d="M240 110 c0-12 18-12 18 0 c0-12 18-12 18 0 c0 14-18 22-18 26 c0-4-18-12-18-26z" fill="#d9897a"/>
+  </svg>
+  <div class="float f1">🦮 Afternoon walk<small>Done · photos sent</small></div>
+  <div class="float f2">🌙 Overnight stay<small>Tucked in, all good</small></div>
+ </div>
+</div></header>
+
+<section id="services" style="padding-top:40px"><div class="wrap">
+ <span class="eyebrow">What I do</span>
+ <h2 class="pf">Care for every kind<br>of family member.</h2>
+ <p class="sub">From quick check-ins to full house sitting, plus the farm friends most sitters won't touch.</p>
+ <div class="svc">
+  <div class="s"><div class="ic" style="background:#fbe3dd">🦮</div><h3>Walks</h3><p>Real exercise and sniff time, not a lap around the block.</p></div>
+  <div class="s"><div class="ic" style="background:#e3ecdf">🏡</div><h3>House sitting &amp; overnights</h3><p>Your pets stay home in their routine, and someone is there all night.</p></div>
+  <div class="s"><div class="ic" style="background:#fdf1d4">🚪</div><h3>Drop-in visits</h3><p>Food, meds, potty breaks, litter and plenty of cuddles.</p></div>
+  <div class="s"><div class="ic" style="background:#e2eef4">☀️</div><h3>Daycare</h3><p>A fun, supervised day so they're not alone while you work.</p></div>
+  <div class="s"><div class="ic" style="background:#f1e6f3">🎓</div><h3>Training</h3><p>Gentle, positive help with manners and everyday habits.</p></div>
+  <div class="s"><div class="ic" style="background:#fbe3dd">🌷</div><h3>Garden Wander</h3><p>Slow, easy strolls made for senior pets.</p></div>
+  <div class="s wide"><div class="ic" style="background:rgba(255,255,255,.2);font-size:34px">🐴</div><div><h3>Saddle &amp; Stall farm care</h3><p>Horses, goats, chickens and more. Feeding, water, stalls and a careful eye while you're away.</p></div></div>
+ </div>
+</div></section>
+
+<div class="wedding" id="weddings">
+ <svg class="rings" viewBox="0 0 200 200" fill="none" stroke="#f2cf7a" stroke-width="10"><circle cx="75" cy="110" r="55"/><circle cx="125" cy="110" r="55"/></svg>
+ <div class="wrap">
+  <span class="eyebrow">Wedding pet attendant</span>
+  <h2 class="pf">Your pet, in the wedding.<br><em style="font-weight:500">Without the stress.</em></h2>
+  <p class="sub">I handle your pet on the big day, from walking down the aisle to the last dance, so you can just enjoy it.</p>
+  <div class="tiers">
+   <div class="tier"><span class="hrs">3 hours</span><h3 class="pf">Aisle Be There</h3><div class="p pf">$350</div><ul><li>Getting ready and the ceremony</li><li>Calm handling for photos</li><li>Your details listed here</li></ul></div>
+   <div class="tier feat"><span class="ribbon">MOST BOOKED</span><span class="hrs">6 hours</span><h3 class="pf">Party Animal</h3><div class="p pf">$600</div><ul><li>Ceremony and reception</li><li>Breaks, water and walks</li><li>Your details listed here</li></ul></div>
+   <div class="tier"><span class="hrs">24 hours</span><h3 class="pf">From I Do to Zzs</h3><div class="p pf">$900</div><ul><li>The whole wedding day</li><li>Overnight care after</li><li>Your details listed here</li></ul></div>
+  </div>
+  <p class="rehearsal">Want your pet at the rehearsal too? Add it for <b>$125</b>.</p>
+ </div>
+</div>
+
+<section><div class="wrap">
+ <span class="eyebrow">Why you can relax</span>
+ <h2 class="pf">Trained, certified,<br>and covered.</h2>
+ <div class="trust" style="margin-top:36px">
+  <div class="t"><span class="ic">🧡</span><div><h3>Fear Free certified</h3><p>Low-stress handling that keeps anxious pets calm.</p></div></div>
+  <div class="t"><span class="ic">⛑️</span><div><h3>Pet CPR &amp; First Aid</h3><p>Ready if something goes wrong, even when it rarely does.</p></div></div>
+  <div class="t"><span class="ic">🛡️</span><div><h3>Insured &amp; bonded</h3><p>Real protection for your pets and your home.</p></div></div>
+ </div>
+</div></section>
+
+<section id="area" style="background:var(--cream2)"><div class="wrap area">
+ <div>
+  <span class="eyebrow">Where I go</span>
+  <h2 class="pf">Based in Griswold.<br>Happy to drive.</h2>
+  <p class="sub" style="margin-bottom:0">Covering eastern Connecticut, Rhode Island and Central Massachusetts. Not sure if you're in range? Just ask.</p>
+ </div>
+ <div class="map">
+  <svg viewBox="0 0 400 260" aria-label="Map of service area">
+   <rect width="400" height="260" rx="20" fill="#f4eadb"/>
+   <path d="M20 40 H380" stroke="#eadfcf" stroke-width="2" stroke-dasharray="6 6"/>
+   <path d="M20 110 H300 M250 40 V240 M300 110 V240" stroke="#eadfcf" stroke-width="2"/>
+   <text x="28" y="30" font-family="Nunito" font-weight="800" font-size="13" fill="#7a6c63">CENTRAL MA</text>
+   <text x="28" y="140" font-family="Nunito" font-weight="800" font-size="13" fill="#7a6c63">CONNECTICUT</text>
+   <text x="310" y="140" font-family="Nunito" font-weight="800" font-size="13" fill="#7a6c63">RI</text>
+   <circle cx="230" cy="170" r="90" fill="#d9897a" opacity=".14"/>
+   <circle cx="230" cy="170" r="50" fill="#d9897a" opacity=".2"/>
+   <path d="M230 150 c-14 0-24 10-24 23 c0 18 24 37 24 37 s24-19 24-37 c0-13-10-23-24-23z" fill="#d9897a"/>
+   <circle cx="230" cy="173" r="8" fill="#fff"/>
+   <text x="186" y="234" font-family="Playfair Display" font-size="16" fill="#2d2420">Griswold, CT</text>
+  </svg>
+ </div>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+ <span class="eyebrow">Happy tails</span>
+ <h2 class="pf">What pet parents say.</h2>
+ <p class="sub">Your real reviews go here, pulled from Google or Rover.</p>
+ <div class="revs">
+  <div class="r"><div class="st">★★★★★</div><p>Your best review goes right here, with the pet's name.</p><small>Pet parent · Griswold</small></div>
+  <div class="r"><div class="st">★★★★★</div><p>A wedding-day review would be perfect in this spot.</p><small>Newlyweds · Rhode Island</small></div>
+  <div class="r"><div class="st">★★★★★</div><p>And one from a farm-care customer.</p><small>Farm owner · Central MA</small></div>
+ </div>
+</div></section>
+
+<section id="book" style="background:var(--cream2)"><div class="wrap book">
+ <div class="contact">
+  <span class="eyebrow">Let's meet</span>
+  <h2 class="pf">Book a free<br>meet &amp; greet.</h2>
+  <p class="sub" style="margin-bottom:0">I'll come say hi to your pets first, so they know me before you leave.</p>
+  <dl>
+   <div><dt>Phone</dt><dd><a href="tel:5084392187">(508) 439-2187</a></dd></div>
+   <div><dt>Email</dt><dd>petcarebynadiya@gmail.com</dd></div>
+  </dl>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Request sent ✓ (demo)'">
+  <div class="row"><input placeholder="Your name" required><input placeholder="Phone" required></div>
+  <div class="pets">
+   <label><input type="checkbox"><span>🐶 Dog</span></label>
+   <label><input type="checkbox"><span>🐱 Cat</span></label>
+   <label><input type="checkbox"><span>🐴 Horse</span></label>
+   <label><input type="checkbox"><span>🐐 Farm animals</span></label>
+   <label><input type="checkbox"><span>🐰 Other</span></label>
+  </div>
+  <select><option>What do you need?</option><option>Walks</option><option>House sitting / overnights</option><option>Drop-in visits</option><option>Daycare</option><option>Training</option><option>Saddle &amp; Stall farm care</option><option>Wedding pet attendant</option></select>
+  <div class="row"><input type="date"><input placeholder="Town"></div>
+  <textarea rows="3" placeholder="Tell me about your pets (names, quirks, favorite treats)"></textarea>
+  <button class="btn" type="submit" style="justify-content:center">Request a meet &amp; greet</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© Petcare by Nadiya · Griswold, CT</span><span>Concept preview by Seif</span></div></footer>
+<div class="callbar"><a class="btn soft" href="tel:5084392187">Call</a><a class="btn" href="#book">Book</a></div>
+</body>
+</html>
