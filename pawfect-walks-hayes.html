@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pawfect Walks Hayes | Dog walking in UB4</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fbfaf6;--ink:#141414;--muted:#6a6a66;--line:#e6e4dc;--red:#dc241f;--blue:#0019a8;--green:#00782a;--yellow:#ffd329;--pink:#f3a9bb;--purple:#9b0056;--teal:#00a4a7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Space Grotesk",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+a{color:inherit;text-decoration:none}
+.is{font-family:"Instrument Serif",Georgia,serif;font-weight:400}
+.banner{background:var(--ink);color:#e5e5e0;font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+nav{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:20}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}
+.rd{width:34px;height:34px;border-radius:50%;border:6px solid var(--red);position:relative;flex:none}
+.rd:after{content:"";position:absolute;left:-10px;right:-10px;top:50%;height:8px;margin-top:-4px;background:var(--blue)}
+.links{display:flex;gap:24px;font-weight:500;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:#fff;font-weight:700;padding:13px 22px;border-radius:99px;font-size:15px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.y{background:var(--yellow);color:var(--ink)}
+.btn.o{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+/* hero */
+.hero{padding:64px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.zone{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:13px;letter-spacing:.06em;background:var(--yellow);padding:6px 12px;border-radius:6px}
+.hero h1{font-size:clamp(50px,7vw,96px);line-height:.92;margin:18px 0 18px;letter-spacing:-.01em}
+.hero h1 em{color:var(--red)}
+.hero p{font-size:18px;color:var(--muted);max-width:480px;margin-bottom:28px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.map{background:#fff;border:1px solid var(--line);border-radius:28px;padding:16px;position:relative}
+.map svg{width:100%;height:auto;display:block}
+.map .walker{offset-path:path("M60 250 H200 Q230 250 240 220 L300 120 H470");animation:walk 9s linear infinite;offset-rotate:0deg}
+@keyframes walk{0%{offset-distance:0%}100%{offset-distance:100%}}
+.station text{font-family:"Space Grotesk";font-weight:700;font-size:13px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:13px;color:var(--muted);padding:0 6px}
+.legend span{display:flex;align-items:center;gap:6px}
+.legend i{width:22px;height:6px;border-radius:3px}
+/* departures board */
+.board{background:#111;color:#ffb000;border-radius:24px;padding:26px;font-family:"Space Grotesk",monospace;margin-top:56px}
+.board h3{color:#fff;font-size:14px;letter-spacing:.14em;margin-bottom:14px;display:flex;justify-content:space-between}
+.board h3 span{color:#ffb000}
+.dep{display:grid;grid-template-columns:110px 1fr auto;gap:16px;padding:12px 0;border-top:1px solid #2a2a2a;font-size:17px;font-weight:500}
+.dep b{color:#fff;font-weight:700}
+.dep .st{color:#7cfc8a}
+section{padding:90px 0}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
+h2{font-size:clamp(40px,5.4vw,68px);line-height:.98;margin:10px 0 14px}
+.sub{color:var(--muted);max-width:560px;font-size:17px;margin-bottom:40px}
+/* services as line roundels */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;position:relative}
+.s .ln{height:8px;border-radius:4px;margin-bottom:22px}
+.s h3{font-size:24px;margin-bottom:6px}
+.s p{color:var(--muted)}
+/* promises */
+.prom{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.pr{padding:28px 24px 0 0}
+.pr .n{font-size:68px;line-height:1}
+.pr h3{font-size:18px;margin:6px 0}
+.pr p{color:var(--muted)}
+/* contact */
+.contact{background:var(--blue);color:#fff}
+.contact .sub{color:#c8cff5}
+.cgrid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
+.cgrid dl{display:grid;gap:14px;margin-top:20px}
+.cgrid dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#aab4ef;font-weight:700}
+.cgrid dd{font-size:21px;font-weight:700}
+form{background:var(--paper);color:var(--ink);border-radius:26px;padding:28px;display:grid;gap:12px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;width:100%;background:#fff}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{background:var(--ink);color:#9a9a95;padding:26px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.callbar{display:none}
+@media (max-width:900px){
+ .links,nav .btn{display:none}
+ .hero{padding:36px 0 20px}
+ .hero-grid,.cgrid{grid-template-columns:1fr}
+ .svc,.prom{grid-template-columns:1fr}
+ .dep{grid-template-columns:80px 1fr;font-size:15px}.dep .st{grid-column:2}
+ section{padding:60px 0}
+ .row{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;gap:8px;padding:10px 12px;background:var(--paper);border-top:1px solid var(--line);z-index:30}
+ .callbar a{flex:1;justify-content:center}
+ body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Free concept preview designed for Pawfect Walks Hayes by Seif · Not the official site</div>
+<nav><div class="wrap">
+ <a class="logo" href="#"><span class="rd"></span>Pawfect Walks Hayes</a>
+ <div class="links"><a href="#routes">Routes</a><a href="#services">Services</a><a href="#promise">Promise</a><a href="#contact">Contact</a></div>
+ <a class="btn" href="tel:07979101741">07979 101741</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <div class="hero-grid">
+  <div>
+   <span class="zone">UB4 · HAYES · WEST LONDON</span>
+   <h1 class="is">Your dog's<br>favourite <em>route.</em></h1>
+   <p>Friendly, fully insured dog walking, boarding and pet sitting from Sharon, an experienced walker who knows every breed and every park round here.</p>
+   <div class="cta"><a class="btn y" href="#contact">Book a walk</a><a class="btn o" href="tel:07979101741">Call 07979 101741</a></div>
+  </div>
+  <div class="map" id="routes">
+   <svg viewBox="0 0 520 320" aria-label="Walking area map in the style of a transit map">
+    <rect width="520" height="320" fill="#fff"/>
+    <path d="M60 250 H200 Q230 250 240 220 L300 120 H470" stroke="#dc241f" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M40 120 H180 Q210 120 220 150 L260 250 H480" stroke="#0019a8" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M150 40 V290" stroke="#00782a" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M330 40 Q330 80 360 90 H490" stroke="#9b0056" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <g class="station" fill="#fff" stroke="#141414" stroke-width="4">
+     <circle cx="150" cy="250" r="12"/><circle cx="150" cy="120" r="12"/><circle cx="240" cy="220" r="9"/><circle cx="300" cy="120" r="9"/><circle cx="470" cy="120" r="9"/><circle cx="60" cy="250" r="9"/><circle cx="480" cy="250" r="9"/><circle cx="360" cy="90" r="9"/><circle cx="150" cy="40" r="9"/>
+    </g>
+    <g class="station" fill="#141414" stroke="none">
+     <text x="166" y="276">HAYES (UB4)</text><text x="166" y="112">HILLINGDON</text><text x="30" y="278">WEST DRAYTON</text><text x="250" y="212">SOUTHALL</text><text x="420" y="110">HARROW</text><text x="166" y="36">UXBRIDGE</text><text x="400" y="276">GREENFORD</text><text x="372" y="80">NORTHOLT</text>
+    </g>
+    <g class="walker"><circle r="13" fill="#ffd329" stroke="#141414" stroke-width="3"/><text x="-8" y="5" font-size="13">🐕</text></g>
+   </svg>
+   <div class="legend"><span><i style="background:#dc241f"></i>Morning walks</span><span><i style="background:#0019a8"></i>Afternoon walks</span><span><i style="background:#00782a"></i>Park runs</span><span><i style="background:#9b0056"></i>Pick-ups</span></div>
+  </div>
+ </div>
+
+ <div class="board">
+  <h3>TODAY'S WALKS <span id="clock">--:--</span></h3>
+  <div class="dep"><b>07:00</b><span>First walks of the day · Hayes</span><span class="st">ON TIME</span></div>
+  <div class="dep"><b>Max 4</b><span>Dogs per walk, never more</span><span class="st">ALWAYS</span></div>
+  <div class="dep"><b>19:00</b><span>Last walks · Mon to Sun</span><span class="st">7 DAYS</span></div>
+ </div>
+</div></header>
+
+<section id="services"><div class="wrap">
+ <span class="eyebrow">Services</span>
+ <h2 class="is">Three lines,<br>one walker.</h2>
+ <p class="sub">Everything your dog needs while you're at work or away.</p>
+ <div class="svc">
+  <div class="s"><div class="ln" style="background:var(--red)"></div><h3>Dog walking</h3><p>Small group or solo walks, 7 AM to 7 PM, every day of the week.</p></div>
+  <div class="s"><div class="ln" style="background:var(--blue)"></div><h3>Dog boarding</h3><p>A safe, homely stay with Sharon while you're away.</p></div>
+  <div class="s"><div class="ln" style="background:var(--green)"></div><h3>Pet sitting</h3><p>Visits at your home in UB4 to feed, play and check in.</p></div>
+ </div>
+</div></section>
+
+<section id="promise" style="padding-top:0"><div class="wrap">
+ <span class="eyebrow">The Pawfect promise</span>
+ <h2 class="is">Small groups.<br>Big care.</h2>
+ <div class="prom" style="margin-top:36px">
+  <div class="pr"><div class="n is">4</div><h3>Dogs at most</h3><p>Every dog gets real attention on every walk.</p></div>
+  <div class="pr"><div class="n is">7</div><h3>Days a week</h3><p>Walks from 7 AM to 7 PM, Monday to Sunday.</p></div>
+  <div class="pr"><div class="n is">100%</div><h3>Fully insured</h3><p>Peace of mind for you and your dog.</p></div>
+ </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap cgrid">
+ <div>
+  <span class="eyebrow" style="color:var(--yellow)">Book</span>
+  <h2 class="is">Next stop:<br>the park.</h2>
+  <p class="sub" style="margin-bottom:0">Covering Hayes, Hillingdon, Uxbridge, Southall, Harrow, West Drayton and the UB4 area.</p>
+  <dl>
+   <div><dt>Phone</dt><dd><a href="tel:07979101741">07979 101741</a></dd></div>
+   <div><dt>Email</dt><dd style="font-size:18px">pawfect.walks.hayes@gmail.com</dd></div>
+   <div><dt>Calls</dt><dd>Mon–Sat, 9 AM–5 PM</dd></div>
+  </dl>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Request sent ✓ (demo)'">
+  <div class="row"><input placeholder="Your name" required><input placeholder="Phone" required></div>
+  <div class="row"><input placeholder="Dog's name"><input placeholder="Breed"></div>
+  <div class="row"><select><option>Service</option><option>Dog walking</option><option>Dog boarding</option><option>Pet sitting</option></select><input placeholder="Postcode (e.g. UB4)"></div>
+  <textarea rows="3" placeholder="Anything Sharon should know?"></textarea>
+  <button class="btn y" type="submit" style="justify-content:center">Request a walk</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© Pawfect Walks Hayes · UB4, London</span><span>Concept preview by Seif</span></div></footer>
+<div class="callbar"><a class="btn o" href="tel:07979101741">Call</a><a class="btn y" href="#contact">Book</a></div>
+<script>
+(function(){var c=document.getElementById('clock');function t(){var d=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/London'}));c.textContent=String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')+' LONDON'}t();setInterval(t,30000)})();
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fresh Mulch Pros | Frisco, TX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--soil:#2b1d14;--bark:#5a3a24;--leaf:#5f8d3a;--lime:#c6e36b;--cream:#f6f1e7;--ink:#1d1a16;--muted:#6f675d;--line:#e6dfd2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.bg{font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.banner{background:#000;color:#ddd;font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:20;background:var(--soil);color:#fff}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px}
+.logo svg{width:30px;height:30px}
+.links{display:flex;gap:26px;font-size:15px;color:#d6c9bb}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--lime);color:var(--soil);font-weight:700;padding:13px 22px;border-radius:14px;font-size:15px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.35)}
+/* hero: mulch texture */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--bark)}
+.mulch{position:absolute;inset:0;transition:background-color .6s}
+.mulch:before{content:"";position:absolute;inset:0;background:
+repeating-linear-gradient(37deg,rgba(0,0,0,.22) 0 3px,transparent 3px 11px),
+repeating-linear-gradient(-58deg,rgba(255,255,255,.07) 0 2px,transparent 2px 13px),
+repeating-linear-gradient(112deg,rgba(0,0,0,.18) 0 4px,transparent 4px 17px),
+repeating-linear-gradient(8deg,rgba(255,255,255,.05) 0 1px,transparent 1px 7px)}
+.mulch:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,12,6,.88) 0,rgba(20,12,6,.6) 50%,rgba(20,12,6,.15) 100%)}
+.hero .wrap{position:relative;padding:96px 20px 80px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.loc{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--lime)}
+.hero h1{font-size:clamp(46px,7vw,92px);line-height:.92;font-weight:800;letter-spacing:-.03em;margin:18px 0 20px}
+.hero h1 span{color:var(--lime)}
+.hero p{font-size:18px;color:#e8ddd0;max-width:520px;margin-bottom:30px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.picker{background:rgba(246,241,231,.97);color:var(--ink);border-radius:24px;padding:24px}
+.picker h3{font-size:20px;margin-bottom:4px}
+.picker p{font-size:14px;color:var(--muted);margin-bottom:16px}
+.sw{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.sw button{display:flex;align-items:center;gap:10px;padding:10px;border-radius:14px;border:2px solid var(--line);background:#fff;font:inherit;font-weight:600;cursor:pointer;text-align:left}
+.sw button.on{border-color:var(--soil)}
+.sw i{width:34px;height:34px;border-radius:10px;flex:none;background-image:repeating-linear-gradient(37deg,rgba(0,0,0,.25) 0 2px,transparent 2px 6px)}
+/* bed illustration */
+.bed{margin-top:16px;border-radius:16px;overflow:hidden}
+.bed svg{display:block;width:100%;height:auto}
+#bedfill{transition:fill .5s}
+section{padding:96px 0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf)}
+h2{font-size:clamp(36px,5vw,60px);line-height:.98;font-weight:800;letter-spacing:-.02em;margin:10px 0 14px}
+.sub{color:var(--muted);max-width:560px;font-size:17px;margin-bottom:44px}
+/* three pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pil{border-radius:28px;padding:32px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.pil h3{font-size:30px;font-weight:800;line-height:1;margin-bottom:12px}
+.pil ul{list-style:none;display:grid;gap:6px;font-size:15px}
+.pil li:before{content:"→ ";opacity:.6}
+.p1{background:var(--bark);color:#fff}
+.p2{background:var(--leaf);color:#fff}
+.p3{background:#d7e3ea;color:var(--ink)}
+.p3 .drops{position:absolute;right:-20px;top:-20px;width:140px;opacity:.5}
+/* before after */
+.ba{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/7;user-select:none}
+.ba .side{position:absolute;inset:0}
+.ba .after{background:#3a2516}
+.ba .after:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(37deg,rgba(0,0,0,.25) 0 3px,transparent 3px 10px),repeating-linear-gradient(-58deg,rgba(255,255,255,.06) 0 2px,transparent 2px 12px)}
+.ba .before{background:#8a8160;clip-path:inset(0 50% 0 0)}
+.ba .before:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,#a69b74 0 6px,transparent 7px) 0 0/38px 34px,radial-gradient(circle at 60% 70%,#6c7a45 0 5px,transparent 6px) 0 0/29px 31px,radial-gradient(circle at 40% 50%,#b3a37a 0 3px,transparent 4px) 0 0/17px 19px}
+.ba .tag{position:absolute;top:18px;padding:6px 12px;border-radius:99px;font-size:13px;font-weight:700;background:rgba(255,255,255,.9);color:var(--ink)}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:#fff;transform:translateX(-50%)}
+.ba .handle:after{content:"⇆";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800;color:var(--soil)}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize}
+.plants{position:absolute;inset:0;pointer-events:none}
+/* commercial strip */
+.comm{background:var(--soil);color:#fff}
+.comm .sub{color:#c9bcae}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chips span{padding:12px 18px;border-radius:14px;background:rgba(255,255,255,.08);font-weight:600}
+/* quote */
+.quote{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
+.info dl{display:grid;gap:16px;margin-top:20px}
+.info dt{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.info dd{font-size:20px;font-weight:700}
+form{background:#fff;border-radius:26px;padding:30px;display:grid;gap:12px;border:1px solid var(--line)}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;width:100%;background:var(--cream)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.yards{display:flex;align-items:center;gap:12px;font-weight:600}
+.yards input{flex:1;accent-color:var(--bark);padding:0;background:none;border:0}
+footer{background:#000;color:#9d948a;padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.callbar{display:none}
+@media (max-width:900px){
+ .links,nav .btn{display:none}
+ .hero .wrap{grid-template-columns:1fr;padding:56px 20px}
+ .pillars,.quote{grid-template-columns:1fr}
+ .pil{min-height:auto;gap:24px}
+ .ba{aspect-ratio:4/3}
+ section{padding:64px 0}
+ .row{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;gap:8px;padding:10px 12px;background:var(--soil);z-index:30}
+ .callbar a{flex:1;justify-content:center}
+ body{padding-bottom:72px}
+}
+</style>
+</head>
+<body>
+<div class="banner">Free concept preview designed for Fresh Mulch Pros by Seif · Not the official site</div>
+<nav><div class="wrap">
+ <a class="logo bg" href="#"><svg viewBox="0 0 32 32"><path d="M16 3C8 8 6 16 9 23c4-1 9-5 11-12-3 6-7 9-10 10 6-2 11-8 6-18z" fill="#c6e36b"/><rect x="4" y="25" width="24" height="4" rx="2" fill="#8a5a36"/></svg>Fresh Mulch Pros</a>
+ <div class="links"><a href="#services">Services</a><a href="#results">Results</a><a href="#commercial">Commercial</a><a href="#quote">Free quote</a></div>
+ <a class="btn" href="tel:2143542131">Call 214-354-2131</a>
+</div></nav>
+
+<header class="hero">
+ <div class="mulch" id="mulchbg" style="background-color:#3a2516"></div>
+ <div class="wrap">
+  <div>
+   <span class="loc">● Frisco, TX &amp; surrounding areas</span>
+   <h1 class="bg">Fresh beds.<br>Clean drives.<br><span>Zero hassle.</span></h1>
+   <p>Mulch installation, yard cleanups and power washing, done fast and priced fairly. Bagging and haul-away are included in every quote.</p>
+   <div class="cta"><a class="btn" href="#quote">Get a free quote</a><a class="btn ghost" href="tel:2143542131">Call 214-354-2131</a></div>
+  </div>
+  <div class="picker">
+   <h3 class="bg">Pick your mulch</h3>
+   <p>Tap a color to see it in a flower bed.</p>
+   <div class="sw">
+    <button class="on" data-c="#2a1a10" data-b="#3a2516"><i style="background-color:#2a1a10"></i>Black dyed</button>
+    <button data-c="#5b3820" data-b="#5a3a24"><i style="background-color:#5b3820"></i>Brown dyed</button>
+    <button data-c="#8a3424" data-b="#6e2c1f"><i style="background-color:#8a3424"></i>Red dyed</button>
+    <button data-c="#9b7048" data-b="#7a5636"><i style="background-color:#9b7048"></i>Pine bark</button>
+   </div>
+   <div class="bed">
+    <svg viewBox="0 0 360 150" aria-label="Flower bed preview">
+     <rect width="360" height="150" fill="#cfe3b0"/>
+     <rect y="0" width="360" height="60" fill="#e9e2d2"/>
+     <rect x="0" y="0" width="360" height="60" fill="#d8cdb6" opacity=".5"/>
+     <path id="bedfill" d="M10 70 Q180 50 350 70 L350 130 Q180 145 10 130Z" fill="#2a1a10"/>
+     <path d="M10 70 Q180 50 350 70" stroke="#b9b1a0" stroke-width="5" fill="none"/>
+     <g fill="#4d7c2c"><circle cx="60" cy="88" r="20"/><circle cx="150" cy="80" r="26"/><circle cx="250" cy="86" r="22"/><circle cx="315" cy="92" r="15"/></g>
+     <g fill="#e66e8b"><circle cx="54" cy="80" r="4"/><circle cx="66" cy="90" r="4"/><circle cx="144" cy="70" r="4"/><circle cx="160" cy="84" r="4"/><circle cx="244" cy="80" r="4"/><circle cx="258" cy="92" r="4"/></g>
+     <g fill="#f4d35e"><circle cx="150" cy="92" r="3"/><circle cx="312" cy="88" r="3"/></g>
+    </svg>
+   </div>
+  </div>
+ </div>
+</header>
+
+<section id="services"><div class="wrap">
+ <span class="eyebrow">What we do</span>
+ <h2 class="bg">Three ways to make<br>your yard look new.</h2>
+ <p class="sub">One crew, one call. Most homes in Frisco get done in a single visit.</p>
+ <div class="pillars">
+  <div class="pil p1"><div><h3 class="bg">Mulch installation</h3><p style="opacity:.8">Black, brown, red or natural pine bark, laid thick and even.</p></div><ul><li>Bed prep and weeding</li><li>Clean, crisp edging</li><li>Old mulch refresh</li></ul></div>
+  <div class="pil p2"><div><h3 class="bg">Yard cleanup</h3><p style="opacity:.85">Leaves, branches and trash, gone. Haul-away included.</p></div><ul><li>Hedge trimming</li><li>Lawn mowing</li><li>Bed refresh</li></ul></div>
+  <div class="pil p3"><svg class="drops" viewBox="0 0 100 100" fill="#7fa7bd"><path d="M30 10c10 18 18 28 18 40a18 18 0 0 1-36 0c0-12 8-22 18-40z"/><path d="M72 40c7 12 12 19 12 27a12 12 0 0 1-24 0c0-8 5-15 12-27z"/></svg><div><h3 class="bg">Power washing</h3><p style="color:#4f6470">Seven kinds of residential washing, from the roofline to the curb.</p></div><ul><li>House, fence and deck</li><li>Driveway and sidewalk</li><li>Garage, pool deck, gutters</li></ul></div>
+ </div>
+</div></section>
+
+<section id="results" style="padding-top:0"><div class="wrap">
+ <span class="eyebrow">See the difference</span>
+ <h2 class="bg">Drag to compare.</h2>
+ <p class="sub">Your real before-and-after photos go here. They sell mulch better than anything.</p>
+ <div class="ba" id="ba">
+  <div class="side after"></div>
+  <div class="side before" id="before"></div>
+  <svg class="plants" viewBox="0 0 1000 440" preserveAspectRatio="none" aria-hidden="true"><g fill="#4d7c2c"><circle cx="140" cy="250" r="70"/><circle cx="420" cy="200" r="90"/><circle cx="700" cy="260" r="75"/><circle cx="900" cy="220" r="55"/></g><g fill="#e66e8b"><circle cx="120" cy="230" r="10"/><circle cx="410" cy="170" r="10"/><circle cx="450" cy="220" r="10"/><circle cx="690" cy="240" r="10"/></g></svg>
+  <span class="tag" style="left:18px">Before</span><span class="tag" style="right:18px">After</span>
+  <div class="handle" id="handle"></div>
+  <input type="range" min="0" max="100" value="50" id="baR" aria-label="Before and after slider">
+ </div>
+</div></section>
+
+<section id="commercial" class="comm"><div class="wrap">
+ <span class="eyebrow" style="color:var(--lime)">Commercial</span>
+ <h2 class="bg">Businesses too.</h2>
+ <p class="sub">Keep your property looking sharp for customers.</p>
+ <div class="chips"><span>Storefronts</span><span>Parking lots</span><span>Dumpster pads &amp; grease traps</span><span>Fleet washing</span><span>Graffiti removal</span></div>
+</div></section>
+
+<section id="quote"><div class="wrap quote">
+ <div class="info">
+  <span class="eyebrow">Free quote</span>
+  <h2 class="bg">Tell us about<br>your yard.</h2>
+  <p class="sub" style="margin-bottom:0">Send a few details and we'll reply with a quote. Bagging and haul-away always included.</p>
+  <dl>
+   <div><dt>Phone</dt><dd><a href="tel:2143542131">214-354-2131</a></dd></div>
+   <div><dt>Email</dt><dd>ftxmulching@gmail.com</dd></div>
+   <div><dt>Area</dt><dd>Frisco, TX &amp; nearby</dd></div>
+  </dl>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Request sent ✓ (demo)'">
+  <div class="row"><input placeholder="Name" required><input placeholder="Phone" required></div>
+  <div class="row"><select><option>Service</option><option>Mulch installation</option><option>Yard cleanup</option><option>Power washing</option><option>Commercial</option></select><select><option>Mulch color</option><option>Black</option><option>Brown</option><option>Red</option><option>Pine bark</option></select></div>
+  <label class="yards">Bed size: <input type="range" min="1" max="30" value="6" id="yd"><span id="ydo">about 6 yards</span></label>
+  <input placeholder="Address or ZIP">
+  <textarea rows="3" placeholder="Anything else?"></textarea>
+  <button class="btn" type="submit" style="justify-content:center">Get my free quote</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© Fresh Mulch Pros · Frisco, TX</span><span>Concept preview by Seif</span></div></footer>
+<div class="callbar"><a class="btn ghost" href="tel:2143542131">Call</a><a class="btn" href="#quote">Free quote</a></div>
+<script>
+document.querySelectorAll('.sw button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.sw button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');document.getElementById('bedfill').setAttribute('fill',b.dataset.c);document.getElementById('mulchbg').style.backgroundColor=b.dataset.b})});
+var r=document.getElementById('baR');r.addEventListener('input',function(){document.getElementById('before').style.clipPath='inset(0 '+(100-r.value)+'% 0 0)';document.getElementById('handle').style.left=r.value+'%'});
+var y=document.getElementById('yd');y.addEventListener('input',function(){document.getElementById('ydo').textContent='about '+y.value+' yards'});
+</script>
+</body>
+</html>

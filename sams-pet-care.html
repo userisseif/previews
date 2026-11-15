@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sam's Pet Care | Trail, BC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#1f3d33;--pine2:#2c5446;--moss:#7d9a6f;--snow:#f7f5f0;--wood:#b07a4f;--ember:#e3a34f;--ink:#1c2420;--muted:#66706a;--line:#e3e0d6}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Karla,system-ui,sans-serif;color:var(--ink);background:var(--snow);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.ds{font-family:"DM Serif Display",Georgia,serif;font-weight:400}
+.banner{background:#0d1a15;color:#d9e2dc;font-size:13px;text-align:center;padding:8px 16px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+nav{position:absolute;left:0;right:0;z-index:5;color:#fff}
+nav,.hero-copy{z-index:3!important}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{font-size:26px}
+.links{display:flex;gap:26px;font-weight:600;color:#d8e4dc}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--ember);color:var(--ink);font-weight:700;padding:13px 22px;border-radius:12px;font-size:15px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.g{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.4)}
+/* mountains hero */
+.hero{position:relative;background:linear-gradient(180deg,#9fc3c9 0%,#d8e6e2 55%,var(--snow) 100%);overflow:hidden;color:#fff;min-height:720px}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,32,26,.6) 0,rgba(14,32,26,.25) 55%,transparent 80%);z-index:1;pointer-events:none}
+.hero svg.mt{position:absolute;left:0;right:0;bottom:0;width:100%;height:78%}
+.snowfall i{position:absolute;top:-10px;width:6px;height:6px;border-radius:50%;background:#fff;opacity:.8;animation:fall linear infinite}
+@keyframes fall{to{transform:translateY(760px) translateX(30px)}}
+.hero-copy{position:relative;z-index:2;padding-top:150px;max-width:640px}
+.hero-copy small{font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:13px;color:var(--ember)}
+.hero h1{font-size:clamp(50px,7.6vw,100px);line-height:.95;margin:14px 0 18px;text-shadow:0 4px 30px rgba(0,0,0,.25)}
+.hero h1 em{color:var(--ember)}
+.hero p{font-size:19px;color:#eef3ef;margin-bottom:28px;max-width:520px;text-shadow:0 2px 12px rgba(0,0,0,.3)}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+section{padding:96px 0}
+.eyebrow{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--wood)}
+h2{font-size:clamp(38px,5vw,62px);line-height:1;margin:10px 0 14px}
+.sub{color:var(--muted);max-width:560px;font-size:17px;margin-bottom:40px}
+/* meet sam & janis */
+.meet{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.person{background:#fff;border-radius:26px;padding:30px;border:1px solid var(--line);display:grid;grid-template-columns:90px 1fr;gap:20px}
+.av{width:90px;height:90px;border-radius:50%;display:grid;place-items:center;font-size:36px;font-family:"DM Serif Display",serif;color:#fff}
+.person h3{font-size:30px;line-height:1}
+.person .role{color:var(--muted);font-size:14px;margin-bottom:12px}
+.creds{list-style:none;display:grid;gap:6px;font-size:15px}
+.creds li{display:flex;gap:8px}
+.creds li:before{content:"✓";color:var(--moss);font-weight:800}
+/* services as cabin cards */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.s{background:var(--pine);color:#fff;border-radius:24px;padding:26px;position:relative;overflow:hidden}
+.s:nth-child(2){background:var(--pine2)}.s:nth-child(3){background:#4a6b4e}.s:nth-child(4){background:var(--wood)}
+.s .em{font-size:34px}
+.s h3{font-size:26px;line-height:1.05;margin:10px 0 6px}
+.s .p{font-family:"DM Serif Display",serif;font-size:40px;line-height:1;margin:12px 0 4px}
+.s .p small{font-family:Karla,sans-serif;font-size:14px;opacity:.75}
+.s p{font-size:14.5px;opacity:.85}
+/* calculator */
+.calc{background:#fff;border-radius:30px;border:1px solid var(--line);display:grid;grid-template-columns:1.1fr 1fr;overflow:hidden}
+.calc .l{padding:34px;display:grid;gap:20px}
+.calc label{font-weight:700;font-size:14px;display:block;margin-bottom:8px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg button{font:inherit;font-weight:600;padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--snow);cursor:pointer}
+.seg button.on{background:var(--pine);border-color:var(--pine);color:#fff}
+.calc input[type=range]{width:100%;accent-color:var(--pine)}
+.calc .num{display:flex;align-items:center;gap:10px}
+.calc .num button{width:40px;height:40px;border-radius:12px;border:1.5px solid var(--line);background:var(--snow);font-size:20px;cursor:pointer}
+.calc .num b{min-width:30px;text-align:center;font-size:20px}
+.calc .r{background:var(--pine);color:#fff;padding:34px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.line{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:15px}
+.total{font-family:"DM Serif Display",serif;font-size:64px;line-height:1}
+.note{font-size:13px;color:#b9cbc1}
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.1fr;gap:48px}
+.contact dl{display:grid;gap:16px;margin-top:20px}
+.contact dt{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.contact dd{font-size:20px;font-weight:700}
+form{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;display:grid;gap:12px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;width:100%;background:var(--snow)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+footer{background:var(--pine);color:#a9bdb2;padding:28px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.callbar{display:none}
+@media (max-width:900px){
+ .links,nav .btn{display:none}
+ .hero{min-height:620px}
+ .hero:after{background:linear-gradient(180deg,rgba(14,32,26,.15),rgba(14,32,26,.6) 45%,rgba(14,32,26,.35) 80%,transparent)}
+ .hero-copy{padding-top:110px}
+ .meet,.calc,.contact{grid-template-columns:1fr}
+ .person{grid-template-columns:1fr}
+ .svc{grid-template-columns:1fr 1fr}
+ section{padding:64px 0}
+ .row{grid-template-columns:1fr}
+ .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;gap:8px;padding:10px 12px;background:var(--pine);z-index:30}
+ .callbar a{flex:1;justify-content:center}
+ body{padding-bottom:72px}
+}
+@media (max-width:520px){.svc{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="banner">Free concept preview designed for Sam's Pet Care by Seif · Not the official site</div>
+<header class="hero">
+ <div class="snowfall" id="snow"></div>
+ <svg class="mt" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <path d="M0 300 L180 140 L300 240 L470 80 L640 250 L800 120 L980 260 L1140 110 L1300 230 L1440 160 V560 H0Z" fill="#6f8f95"/>
+  <path d="M470 80 L520 128 L500 124 L480 140 L455 118 L440 108Z M800 120 L840 158 L815 152 L796 166 L780 150Z M1140 110 L1180 148 L1155 142 L1136 156 L1120 140Z" fill="#fff"/>
+  <path d="M0 380 L120 300 L260 360 L420 260 L600 370 L760 290 L940 380 L1100 300 L1280 370 L1440 320 V560 H0Z" fill="#3e5f55"/>
+  <g fill="#1f3d33">
+   <path d="M60 560 L100 380 L140 560Z"/><path d="M150 560 L180 420 L210 560Z"/><path d="M1220 560 L1260 360 L1300 560Z"/><path d="M1310 560 L1345 410 L1380 560Z"/><path d="M1380 560 L1410 440 L1440 560Z"/><path d="M0 560 L30 440 L60 560Z"/>
+  </g>
+  <path d="M0 470 Q360 440 720 470 T1440 460 V560 H0Z" fill="#f7f5f0"/>
+ </svg>
+ <nav><div class="wrap">
+  <a class="logo ds" href="#">Sam's Pet Care</a>
+  <div class="links"><a href="#meet">Meet us</a><a href="#services">Services</a><a href="#calc">Price check</a><a href="#contact">Contact</a></div>
+  <a class="btn" href="tel:2509215706">250-921-5706</a>
+ </div></nav>
+ <div class="wrap hero-copy">
+  <small>Trail, British Columbia · since 2018</small>
+  <h1 class="ds">A home away<br>from <em>home.</em></h1>
+  <p>Cat sitting, dog boarding and daycare in Trail, run by a husband-and-wife team with decades of shelter and rescue experience.</p>
+  <div class="cta"><a class="btn" href="#contact">Book a stay</a><a class="btn g" href="#calc">Check a price</a></div>
+ </div>
+</header>
+
+<section id="meet"><div class="wrap">
+ <span class="eyebrow">Meet us</span>
+ <h2 class="ds">Two pet people,<br>one cozy home.</h2>
+ <p class="sub">Your pets stay with people who have spent years with the SPCA, wildlife rescue and animal sanctuaries.</p>
+ <div class="meet">
+  <div class="person"><div class="av" style="background:var(--pine)">S</div><div><h3 class="ds">Sam</h3><div class="role">Founder</div><ul class="creds"><li>Volunteer with Vancouver BC SPCA &amp; animal shelters since 1999</li><li>Greyhaven Exotic Bird Sanctuary &amp; Wildlife Rescue Association</li><li>Animal Welfare Certificate, Thompson Rivers University</li><li>St. John Ambulance Pet First Aid</li></ul></div></div>
+  <div class="person"><div class="av" style="background:var(--wood)">J</div><div><h3 class="ds">Janis</h3><div class="role">Joined February 2018</div><ul class="creds"><li>ProPetHero First Aid &amp; CPR for Pets</li><li>Volunteer at Richmond BC SPCA</li><li>Decades of living with cats and dogs</li></ul></div></div>
+ </div>
+</div></section>
+
+<section id="services" style="padding-top:0"><div class="wrap">
+ <span class="eyebrow">Services</span>
+ <h2 class="ds">Stays &amp; visits.</h2>
+ <p class="sub">Clear, simple prices in Canadian dollars.</p>
+ <div class="svc">
+  <div class="s"><div class="em">🐈</div><h3 class="ds">Cat sitting</h3><div class="p">$27.50<small> / visit</small></div><p>Daily drop-ins at your home. +$5 per extra cat.</p></div>
+  <div class="s"><div class="em">🏡</div><h3 class="ds">Dog boarding</h3><div class="p">$27.50<small> / night</small></div><p>Two 15-minute walks a day. $50 for two dogs.</p></div>
+  <div class="s"><div class="em">☀️</div><h3 class="ds">Dog daycare</h3><div class="p">$27.50<small> / day</small></div><p>Drop off as early as 5 AM, pick up by 10 PM.</p></div>
+  <div class="s"><div class="em">🐇</div><h3 class="ds">Small pets &amp; birds</h3><div class="p">$10<small> / night</small></div><p>Boarding for rabbits, rodents and feathered friends.</p></div>
+ </div>
+</div></section>
+
+<section id="calc" style="padding-top:0"><div class="wrap">
+ <span class="eyebrow">Price check</span>
+ <h2 class="ds">What will it cost?</h2>
+ <p class="sub">Pick a service and see the total, including drop-off travel.</p>
+ <div class="calc">
+  <div class="l">
+   <div><label>Service</label><div class="seg" id="svc"><button class="on" data-s="board">Dog boarding</button><button data-s="day">Daycare</button><button data-s="cat">Cat sitting</button><button data-s="small">Small pet / bird</button></div></div>
+   <div><label id="petlbl">Number of dogs</label><div class="num"><button type="button" id="minus">−</button><b id="pets">1</b><button type="button" id="plus">+</button></div></div>
+   <div><label><span id="unitlbl">Nights</span>: <b id="nv">3</b></label><input type="range" min="1" max="14" value="3" id="nights"></div>
+   <div><label>Distance from downtown Trail: <b id="kv">4 km</b></label><input type="range" min="0" max="30" value="4" id="km"></div>
+  </div>
+  <div class="r">
+   <div>
+    <div class="line"><span id="l1">Dog boarding × 3 nights</span><span id="l1v">$82.50</span></div>
+    <div class="line"><span>Drop-off travel</span><span id="l2v">Free</span></div>
+   </div>
+   <div><div class="total" id="tot">$82.50</div><p class="note">Estimate only, in CAD. Sam confirms the final price when you book.</p></div>
+   <a class="btn" href="#contact">Book this stay</a>
+  </div>
+ </div>
+</div></section>
+
+<section id="contact" style="background:#ece9df"><div class="wrap contact">
+ <div>
+  <span class="eyebrow">Contact</span>
+  <h2 class="ds">Book a stay.</h2>
+  <dl>
+   <div><dt>Mobile</dt><dd><a href="tel:2509215706">250-921-5706</a></dd></div>
+   <div><dt>Email</dt><dd>samzpetcare@gmail.com</dd></div>
+   <div><dt>Based in</dt><dd>Trail, BC</dd></div>
+  </dl>
+ </div>
+ <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Request sent ✓ (demo)'">
+  <div class="row"><input placeholder="Your name" required><input placeholder="Phone" required></div>
+  <div class="row"><input type="date" aria-label="Start date"><input type="date" aria-label="End date"></div>
+  <select><option>Service</option><option>Cat sitting</option><option>Dog boarding</option><option>Dog daycare</option><option>Small pet / bird boarding</option></select>
+  <textarea rows="3" placeholder="Tell us about your pets"></textarea>
+  <button class="btn" type="submit" style="justify-content:center">Send request</button>
+ </form>
+</div></section>
+
+<footer><div class="wrap"><span>© Sam's Pet Care · Trail, BC</span><span>Concept preview by Seif</span></div></footer>
+<div class="callbar"><a class="btn g" href="tel:2509215706">Call</a><a class="btn" href="#contact">Book</a></div>
+<script>
+(function(){var s=document.getElementById('snow');for(var i=0;i<40;i++){var e=document.createElement('i');e.style.left=Math.random()*100+'%';e.style.animationDuration=(6+Math.random()*8)+'s';e.style.animationDelay=(-Math.random()*12)+'s';var z=2+Math.random()*5;e.style.width=e.style.height=z+'px';s.appendChild(e)}})();
+var st={s:'board',p:1};
+var cfg={board:{n:'Dog boarding',u:'nights',pl:'Number of dogs'},day:{n:'Daycare',u:'days',pl:'Number of dogs'},cat:{n:'Cat sitting',u:'visits',pl:'Number of cats'},small:{n:'Small pet boarding',u:'nights',pl:'Number of pets'}};
+function money(x){return '$'+x.toFixed(2)}
+function calc(){var n=+document.getElementById('nights').value,k=+document.getElementById('km').value,p=st.p,per;
+ if(st.s==='board')per=p===1?27.5:(p===2?50:50+27.5*(p-2));
+ else if(st.s==='day')per=27.5*p;
+ else if(st.s==='cat')per=27.5+5*(p-1);
+ else per=10*p;
+ var base=per*n,tr=k<=5?0:(k<=10?5:0.75*k*2);
+ var c=cfg[st.s];document.getElementById('petlbl').textContent=c.pl;document.getElementById('unitlbl').textContent=c.u[0].toUpperCase()+c.u.slice(1);
+ document.getElementById('nv').textContent=n;document.getElementById('kv').textContent=k+' km';document.getElementById('pets').textContent=p;
+ document.getElementById('l1').textContent=c.n+' × '+n+' '+c.u;document.getElementById('l1v').textContent=money(base);
+ document.getElementById('l2v').textContent=tr?money(tr):'Free';document.getElementById('tot').textContent=money(base+tr)}
+document.querySelectorAll('#svc button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('#svc button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');st.s=b.dataset.s;if(st.s==='board'&&st.p>2)st.p=2;calc()})});
+document.getElementById('plus').onclick=function(){st.p=Math.min(st.s==='board'?2:6,st.p+1);calc()};document.getElementById('minus').onclick=function(){st.p=Math.max(1,st.p-1);calc()};
+document.getElementById('nights').oninput=calc;document.getElementById('km').oninput=calc;calc();
+</script>
+</body>
+</html>
